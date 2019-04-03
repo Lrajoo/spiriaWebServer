@@ -135,3 +135,9 @@ MEDIA_URL = '/media/'
 MEDIAFILES_DIRS = [
     os.path.join(BASE_DIR, 'spiria/media')
 ]
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
