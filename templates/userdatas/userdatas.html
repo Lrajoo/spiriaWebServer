@@ -5,8 +5,8 @@
         <div class="container">
           <div class="row text-center">
             <div class="col-md-12">
-              <h1 class="display-4">Browse Our Properties</h1>
-              <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+              <h1 class="display-4">Results</h1>
+              <p class="lead">Each user's spiral drawing, rest tremor frequency, age, and questionnaire response are displayed below.</p>
             </div>
           </div>
         </div>
@@ -21,7 +21,7 @@
                 <a href="{% url 'index' %}">
                   <i class="fas fa-home"></i> Home</a>
               </li>
-              <li class="breadcrumb-item active"> Browse Listings</li>
+              <li class="breadcrumb-item active">Browse Results</li>
             </ol>
           </nav>
         </div>
@@ -44,33 +44,26 @@
                     </div>
                     <div class="card-body">
                       <div class="listing-heading text-center">
-                        <h4 class="text-primary">{{userdata.userid}}</h4>
+                        <h4 class="text-primary">UserID: {{userdata.userid}}</h4>
                         <p>
-                          <i class="fas fa-map-marker text-secondary"></i> Preliminary Prediction: {{userdata.prediction}}</p>
+                          Preliminary Prediction: {{userdata.prediction}}</p>
                       </div>
                       <hr>
                       <div class="row py-2 text-secondary">
                         <div class="col-6">
-                          <i class="fas fa-th-large"></i> Tremor Frequency: {{userdata.tremor}} Hz</div>
+                          Age: {{userdata.age}}
+                          </div>
                         <div class="col-6">
-                          <i class="fas fa-car"></i> Age: {{userdata.age}}</div>
+                          Tremor: {{userdata.tremor}} Hz</div>
                       </div>
                       <div class="row py-2 text-secondary">
                         <div class="col-6">
-                          <i class="fas fa-bed"></i> Questionnaire: {{userdata.questionnaire}} %</div>
+                          Response: {{userdata.questionnaire}} %</div>
                         <div class="col-6">
-                          <i class="fas fa-bath"></i> Date: {{userdata.date}}</div>
+                          </div>
                       </div>
                       <hr>
-                      <div class="row py-2 text-secondary">
-                        <div class="col-12">
-                          <i class="fas fa-user"></i> Kyle Brown</div>
-                      </div>
-                      <div class="row text-secondary pb-2">
-                        <div class="col-6">
-                          <i class="fas fa-clock"></i> 2 days ago</div>
-                      </div>
-                      <hr>
+                      
                       <a href="{% url 'userdata' userdata.id %}" class="btn btn-primary btn-block">More Info</a>
                     </div>
                   </div>
