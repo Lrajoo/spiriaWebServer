@@ -12,5 +12,11 @@ class UserdataSerializer(serializers.ModelSerializer):
             'tremor',
             'questionnaire',
             'prediction',
-            'date'
+            'date',
+            'response1',
+            'response2',
+            'response3',
+            'response4',
+            'response5',
+            'response6',
         ]
