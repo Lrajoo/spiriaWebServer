@@ -21,7 +21,7 @@ def user(request, userdata_id):
     context = {
         'userdata': userdata
     }
-    return render(request, 'userdatas/userdata.html')
+    return render(request, 'userdatas/userdata.html', context)
 
 def search(request):
     return render(request, 'userdatas/search.html')

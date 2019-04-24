@@ -17,9 +17,14 @@ class Userdata(models.Model):
     spiral = models.ImageField(upload_to='images')
     tremor = models.IntegerField()
     questionnaire = models.IntegerField()
+    response1 = models.CharField(max_length=100, default=False)
+    response2 = models.CharField(max_length=100, default=False)
+    response3 = models.CharField(max_length=100, default=False)
+    response4 = models.CharField(max_length=100, default=False)
+    response5 = models.CharField(max_length=100, default=False)
+    response6 = models.CharField(max_length=100, default=False)
     prediction = models.BooleanField(default=False)
     date = models.DateTimeField(default=datetime.now, blank=True)
-    
     objects = StatusManager()
 
     def __str__(self):

@@ -24,108 +24,48 @@
         <div class="container">
           <h3 class="text-center mb-3">Recent Results</h3>
           <div class="row">
+            {% if userdatas %}
+              {% for userdata in userdatas %}
+                <div class="col-md-6 col-lg-4 mb-4">
+                  <div class="card listing-preview">
+                    <img class="card-img-top" src="{{userdata.spiral.url}}" alt="">
+                    <div class="card-img-overlay">
+                      <h2>
+                        <span class="badge badge-secondary text-white">{{userdata.prediction}}</span>
+                      </h2>
+                    </div>
+                    <div class="card-body">
+                      <div class="listing-heading text-center">
+                        <h4 class="text-primary">UserID: {{userdata.userid}}</h4>
+                        <p>
+                 
+                      </div>
+                      <hr>
+                      <div class="row py-2 text-secondary">
+                        <div class="col-6">
+                            Age: {{userdata.age}}</div>
+                        <div class="col-6">
+                            Tremor: {{userdata.tremor}} Hz</div>
+                      </div>
+                      <div class="row py-2 text-secondary">
+                        <div class="col-6">
+                            Response: {{userdata.questionnaire}} %</div>
+                        <div class="col-6">
+                          </div>
+                      </div>
+                      <hr>
+    
+                      <a href="{% url 'userdata' userdata.id %}" class="btn btn-primary btn-block">More Info</a>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            {% else%}
+              <div class="col-md-12">
+                <h3>No Users Available</h3>
+              </div>  
+            {% endif %}
             <!-- Listing 1 -->
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card listing-preview">
-                <img class="card-img-top" src="media/images/sp1-P1.jpg" alt="">
-                <div class="card-img-overlay">
-                  <h2>
-                    <span class="badge badge-secondary text-white">True</span>
-                  </h2>
-                </div>
-                <div class="card-body">
-                  <div class="listing-heading text-center">
-                    <h4 class="text-primary">User ID: 1</h4>
-                    <p>
-             
-                  </div>
-                  <hr>
-                  <div class="row py-2 text-secondary">
-                    <div class="col-6">
-                      Age: 90</div>
-                    <div class="col-6">
-                      Tremor: 5 Hz</div>
-                  </div>
-                  <div class="row py-2 text-secondary">
-                    <div class="col-6">
-                      Responses: 80%</div>
-                    <div class="col-6">
-                      </div>
-                  </div>
-                  <hr>
-
-                  <a href="userdata.html" class="btn btn-primary btn-block">More Info</a>
-                </div>
-              </div>
-            </div>
-    
-            <!-- Listing 2 -->
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card listing-preview">
-                <img class="card-img-top" src="media/images/sp1-P11.jpg" alt="">
-                <div class="card-img-overlay">
-                  <h2>
-                    <span class="badge badge-secondary text-white">False</span>
-                  </h2>
-                </div>
-                <div class="card-body">
-                  <div class="listing-heading text-center">
-                    <h4 class="text-primary">User ID: 2</h4>
-                    <p>
-          
-                  </div>
-                  <hr>
-                  <div class="row py-2 text-secondary">
-                    <div class="col-6">
-                      Age: 85</div>
-                    <div class="col-6">
-                      Tremor: 4 Hz</div>
-                  </div>
-                  <div class="row py-2 text-secondary">
-                    <div class="col-6">
-                      Responses: 92%</div>
-                    <div class="col-6">
-                      </div>
-                  </div>
-                  <hr>
-                  <a href="userdata.html" class="btn btn-primary btn-block">More Info</a>
-                </div>
-              </div>
-            </div>
-    
-            <!-- Listing 3 -->
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card listing-preview">
-                <img class="card-img-top" src="media/images/sp1-P12.jpg" alt="">
-                <div class="card-img-overlay">
-                  <h2>
-                    <span class="badge badge-secondary text-white">False</span>
-                  </h2>
-                </div>
-                <div class="card-body">
-                  <div class="listing-heading text-center">
-                    <h4 class="text-primary">User ID: 3</h4>
-                    <p>
-           
-                  </div>
-                  <hr>
-                  <div class="row py-2 text-secondary">
-                    <div class="col-6">
-                      Age: 67</div>
-                    <div class="col-6">
-                      Tremor: 5 Hz</div>
-                  </div>
-                  <div class="row py-2 text-secondary">
-                    <div class="col-6">
-                      Responses: 60%</div>
-                    <div class="col-6">
-                      </div>
-                  </div>
-                  <hr>
-                  <a href="userdata.html" class="btn btn-primary btn-block">More Info</a>
-                </div>
-              </div>
-            </div>
     
           </div>
         </div>
