@@ -9,9 +9,10 @@ class UserdataSerializer(serializers.ModelSerializer):
             'userid',
             'age',
             'spiral',
+            'spiral_test',
             'tremor',
+            'tremor_test'
             'questionnaire',
-            'prediction',
             'date',
             'response1',
             'response2',
@@ -19,4 +20,5 @@ class UserdataSerializer(serializers.ModelSerializer):
             'response4',
             'response5',
             'response6',
+            'prediction',
         ]

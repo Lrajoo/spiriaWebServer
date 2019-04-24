@@ -6,7 +6,7 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">User ID: {{ userdata.userid}}</h1>
+          <h1 class="display-4">User ID: {{ userdata.userid}}<br>Preliminary Prediction: {{ userdata.prediction}}</h1>
           <p class="lead">
              </p>
         </div>
@@ -52,6 +52,10 @@
                   <span class="float-right">{{ userdata.tremor }} Hz</span>
                 </li>
                 <li class="list-group-item text-secondary">
+                  <i class="fas "></i> Spiral Test:
+                  <span class="float-right">{{ userdata.spiral_test }}</span>
+                </li>
+                <li class="list-group-item text-secondary">
                   <i class="fas "></i> Response 1:
                   <span class="float-right">{{ userdata.response1 }}</span>
                 </li>
@@ -77,6 +81,10 @@
                   <i class="fas "></i> Questionnaire:
                   <span class="float-right">{{ userdata.questionnaire }} %
                   </span>
+                </li>
+                <li class="list-group-item text-secondary">
+                  <i class="fas "></i> Tremor Test:
+                  <span class="float-right">{{ userdata.tremor_test }}</span>
                 </li>
                 <li class="list-group-item text-secondary">
                   <i class="fas "></i> Response 4:
