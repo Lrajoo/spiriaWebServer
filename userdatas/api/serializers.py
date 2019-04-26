@@ -11,7 +11,7 @@ class UserdataSerializer(serializers.ModelSerializer):
             'spiral',
             'spiral_test',
             'tremor',
-            'tremor_test'
+            'tremor_test',
             'questionnaire',
             'date',
             'response1',
